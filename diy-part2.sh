@@ -12,13 +12,15 @@
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
 
 # Add a feeds
-git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
-git clone https://github.com/kenzok8/small package/small
+#git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
+#git clone https://github.com/kenzok8/small package/small
 
 #Add a feeds
 git clone https://github.com/lwz322/luci-app-k3screenctrl package/luci-app-k3screenctrl
 git clone https://github.com/lwz322/k3screenctrl_build package/k3screenctrl_build
 
+#Add a feeds
+git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR package/luci-app-koolproxyR
 
 
 #update & install
