@@ -19,3 +19,9 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 
 # Add a feed source
 sed -i '$a src-git small https://github.com/kenzok8/small.git' feeds.conf.default
+
+# Add a feeds
+sed -i '$a src-git k3screenctrl https://github.com/enettong/k3screenctrl.git' feeds.conf.default
+
+# Add a feeds
+sed -i '$a src-git luci-app-k3screenctrl https://github.com/enettong/luci-app-k3screenctrl.git' feeds.conf.default
