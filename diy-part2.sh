@@ -16,7 +16,7 @@ git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
 
 #Add a feeds
-git clone https;//github.com/lwz322/luci-app-k3screenctrl package/luci-app-k3screenctrl
+git clone https://github.com/lwz322/luci-app-k3screenctrl package/luci-app-k3screenctrl
 git clone https://github.com/lwz322/k3screenctrl_build package/k3screenctrl_build
 
 
