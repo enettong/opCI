@@ -11,9 +11,16 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
 
+#enable WiFi
+sed -i 's/set wireless.radio${devidx}.disabled=1/set wireless.radio${devidx}.disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
 # Add a feeds
-#git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
-#git clone https://github.com/kenzok8/small package/small
+git clone https://github.com/coolsnowwolf/lede
+cp -rf ./lede/package/lean ./package/
+rm -rf ./lede
+rm -rf ./package/lean/k3screenctrl
+git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
+git clone https://github.com/kenzok8/small package/small
 
 #Add a feeds
 git clone https://github.com/lwz322/luci-app-k3screenctrl package/luci-app-k3screenctrl
