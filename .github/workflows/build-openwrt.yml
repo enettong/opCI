@@ -128,7 +128,7 @@ jobs:
       run: |
         cd openwrt/bin/targets/*/*
         ls | grep -v *k3* | xargs rm -rf  
-        cp -r openwrt/.config ./k3.config
+        #cp -r openwrt/.config ./k3.config
         echo "::set-env name=FIRMWARE::$PWD"
         echo "::set-output name=status::success"
 
