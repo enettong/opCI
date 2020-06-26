@@ -19,7 +19,7 @@ git clone https://github.com/coolsnowwolf/lede
 cp -rf ./lede/package/lean ./package/
 cp -rf ./lede/tools/upx ./tools/
 cp -rf ./lede/tools/ucl ./tools/
-sed -i 's/# builddir dependencies/tools-y += ucl upx\n# builddir dependencies\n$(curdir)//upx//compile := $(curdir)//ucl//compile/g' tools/Makefile
+sed '42a tools-y += ucl upx\n$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
 rm -rf ./lede
 rm -rf ./package/lean/k3screenctrl
 git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
