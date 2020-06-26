@@ -17,8 +17,9 @@ sed -i 's/set wireless.radio${devidx}.disabled=1/set wireless.radio${devidx}.dis
 # Add a feeds
 git clone https://github.com/coolsnowwolf/lede
 cp -rf ./lede/package/lean ./package/
-cp -rf ./lede/tools/upx /workdir/openwrt/staging_dir/host/bin/
-cp -rf ./lede/tools/ucl /workdir/openwrt/staging_dir/host/bin/
+cp -rf ./lede/tools/upx ./tools/
+cp -rf ./lede/tools/ucl ./tools/
+sed -i 's/# builddir dependencies/tools-y += ucl upx\n# builddir dependencies\n$(curdir)//upx//compile := $(curdir)//ucl//compile/g' tools/Makefile
 rm -rf ./lede
 rm -rf ./package/lean/k3screenctrl
 git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
