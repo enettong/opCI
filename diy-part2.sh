@@ -17,10 +17,10 @@ sed -i 's/set wireless.radio${devidx}.disabled=1/set wireless.radio${devidx}.dis
 # Add a feeds
 git clone https://github.com/coolsnowwolf/lede
 cp -rf ./lede/package/lean ./package/
-cp -rf ./lede/tools/upx ./tools/
-cp -rf ./lede/tools/ucl ./tools/
-sed -i '11a tools-y += ucl upx' ./tools/Makefile
-sed -i '43a $(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
+#cp -rf ./lede/tools/upx ./tools/
+#cp -rf ./lede/tools/ucl ./tools/
+#sed -i '11a tools-y += ucl upx' ./tools/Makefile
+#sed -i '43a $(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
 rm -rf ./lede
 rm -rf ./package/lean/k3screenctrl
 git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
