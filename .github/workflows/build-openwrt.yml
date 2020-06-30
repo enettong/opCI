@@ -58,8 +58,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        sudo ln /usr/bin/upx /workdir/openwrt/staging_dir/host/bin/upx
-
+        
     - name: Clone source code
       working-directory: /workdir
       run: |
