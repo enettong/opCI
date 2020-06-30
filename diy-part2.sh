@@ -37,3 +37,6 @@ git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR package/luci-app-k
 #update & install
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+#Fix upx
+sudo ln /usr/bin/upx /workdir/openwrt/staging_dir/host/bin/upx
