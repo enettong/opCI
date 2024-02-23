@@ -12,6 +12,12 @@ name: Build OpenWrt
 
 on:
   repository_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      #- '.config'
+      - 'start'
   workflow_dispatch:
     inputs:
       ssh:
