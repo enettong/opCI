@@ -38,8 +38,8 @@ sed -i 's/set wireless.${name}.disabled=1/set wireless.${name}.disabled=0/g' pac
 
 
 #update & install
-./scripts/feeds update -a
-./scripts/feeds install -a
+#./scripts/feeds update -a
+#./scripts/feeds install -a
 
 #Fix upx
 #sudo ln /usr/bin/upx /workdir/openwrt/staging_dir/host/bin/upx
