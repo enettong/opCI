@@ -15,17 +15,17 @@ sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_gener
 sed -i 's/set wireless.${name}.disabled=1/set wireless.${name}.disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # Add a feeds
-git clone https://github.com/coolsnowwolf/lede
-cp -rf ./lede/package/lean ./package/
+#git clone https://github.com/coolsnowwolf/lede
+#cp -rf ./lede/package/lean ./package/
 #cp -rf ./lede/tools/upx ./tools/
 #cp -rf ./lede/tools/ucl ./tools/
 #sed -i '11a tools-y += ucl upx' ./tools/Makefile
 #sed -i '43a $(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
-rm -rf ./lede
+#rm -rf ./lede
 #rm -rf ./package/lean/k3screenctrl
 
 #Add a feeds
-sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+#sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 #git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
 #git clone https://github.com/kenzok8/small package/small
 
