@@ -12,16 +12,16 @@
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
 
 #enable WiFi
-sed -i 's/set wireless.${name}.disabled=1/set wireless.${name}.disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/set wireless.${name}.disabled=1/set wireless.${name}.disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # Add a feeds
-git clone https://github.com/coolsnowwolf/lede
-cp -rf ./lede/package/lean ./package/
+#git clone https://github.com/coolsnowwolf/lede
+#cp -rf ./lede/package/lean ./package/
 #cp -rf ./lede/tools/upx ./tools/
 #cp -rf ./lede/tools/ucl ./tools/
 #sed -i '11a tools-y += ucl upx' ./tools/Makefile
 #sed -i '43a $(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
-rm -rf ./lede
+#rm -rf ./lede
 #rm -rf ./package/lean/k3screenctrl
 
 #Add a feeds
@@ -38,8 +38,8 @@ rm -rf ./lede
 
 
 #update & install
-./scripts/feeds update -a
-./scripts/feeds install -a
+#./scripts/feeds update -a
+#./scripts/feeds install -a
 
 #Fix upx
 #sudo ln /usr/bin/upx /workdir/openwrt/staging_dir/host/bin/upx
