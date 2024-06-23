@@ -36,10 +36,8 @@ sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_gener
 #Add a feeds
 #git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR package/luci-app-koolproxyR
 
-
-#update & install
-./scripts/feeds update -a
-./scripts/feeds install -a
+#install package
+./scripts/feeds install libpam
 
 #Fix upx
 #sudo ln /usr/bin/upx /workdir/openwrt/staging_dir/host/bin/upx
